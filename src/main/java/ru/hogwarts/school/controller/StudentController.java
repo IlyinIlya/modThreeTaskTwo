@@ -28,8 +28,8 @@ public class StudentController {
 
     @GetMapping("/age")
     public List<Student> getStudents(
-            @RequestParam(required = false) Integer minAge,
-            @RequestParam(required = false) Integer maxAge) {
+            @RequestParam Integer minAge,
+            @RequestParam Integer maxAge) {
         return studentService.getByAge(minAge, maxAge);
     }
 
